@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov 29 10:24:19 2024
-
 @author: andres.sanchez
 """
 from sklearn.model_selection import KFold
