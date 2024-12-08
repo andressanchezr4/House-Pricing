@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Nov 30 12:16:38 2024
-
 @author: andres.sanchez
 """
 import os
