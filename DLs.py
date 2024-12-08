@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec  3 11:25:32 2024
-
 @author: andres.sanchez
 """
 
@@ -153,62 +151,3 @@ lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
 )
 
         
-# # Autoencoder model
-# autoencoder = Autoencoder(train_x)
-
-# loss_threshold_callback = LossThresholdCallback(threshold=100)
-
-# # early_stopping = tf.keras.callbacks.EarlyStopping(
-# #     monitor="val_loss",   # Metric to monitor
-# #     min_delta=0.05,       # Minimum change to qualify as an improvement (5% relative improvement)
-# #     patience=2,           # Number of epochs to wait before stopping
-# #     restore_best_weights=True  # Restore the weights of the best epoch
-# # )
-  
-# lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
-#     0.001,
-#     decay_steps=1000,  # Number of steps for each decay
-#     decay_rate=0.8,  # Decay rate
-#     staircase=True  # Apply decay after each step
-# )
-
-# # Compile the model
-# optimizer = tf.keras.optimizers.Adam(learning_rate=lr_schedule)
-# autoencoder.compile(optimizer=optimizer)
-
-# # Train the model
-# historia_entrenamiento = autoencoder.fit(train_x, train_x, epochs=1000, 
-#                            batch_size=128, validation_data=(val_x, val_x),
-#                             callbacks=loss_threshold_callback
-#                            )
-
-# # Se obtiene la información del historial del entrenamiento
-# historia = historia_entrenamiento.history
-
-# plt.plot(historia['data_loss'], label='Pérdida conjunto Entrenamiento')
-# plt.plot(historia['val_data_loss'], label='Pérdida conjunto Validación')
-# plt.title('Evolución de la función de pérdida durante el entrenamiento')
-# plt.xlabel('Época')
-# plt.ylabel('Pérdida')
-# plt.legend()
-# plt.show()
-
-# decoded_data, latent_space = autoencoder.predict(train_x)
-# decoded_data_val, latent_space_val = autoencoder.predict(val_x)
-
-# mi_sl = SuperLearner(latent_space, train_y)
-# mi_sl.fit()
-
-# y_pred_val = mi_sl.predict(latent_space_val)
-# print(f'SuperLearner RMSE: {np.sqrt(mean_squared_error(val_y, y_pred_val))}')
-# mi_sl.evaluate_models(latent_space_val, val_y)
-
-# extra_tree = ExtraTreesClassifier(n_estimators=200, random_state=1234)
-# extra_tree.fit(latent_space, train_y)
-# y_pred_val_t = extra_tree.predict(latent_space_val)
-# print(f'ExtraTrees RMSE: {np.sqrt(mean_squared_error(val_y, y_pred_val_t))}')
-
-# decoded_data_test, latent_space_test = autoencoder.predict(df_test_imputed)
-
-# from sklearn.manifold import TSNE
-
