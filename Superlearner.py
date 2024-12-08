@@ -189,16 +189,3 @@ class SuperLearner(object):
         self.fit_meta_model()
         
     
-# mi_sl = SuperLearner(train_x, train_y)
-# mi_sl.fit()
-# y_pred_val = mi_sl.predict(val_x)
-# print(f'SuperLearner RMSE: {np.sqrt(mean_squared_error(val_y, y_pred_val))}')
-# mi_sl.evaluate_models() 
-
-# best_models = mi_sl.best_models
-# optimised_sl = SuperLearner(train_x, train_y, val_x, val_y, model_list = best_models)
-# y_pred_val_opt = optimised_sl.fit()
-# print(f'SuperLearner Optimised RMSE: {np.sqrt(mean_squared_error(val_y, y_pred_val_opt))}')
-
-# mi_sl.evaluate_models() 
- 
