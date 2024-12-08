@@ -260,51 +260,7 @@ class MLsPipeline(object):
     
         return xgb_model, rmse
 
-# pipeline = MLsPipeline(train_x, train_y, val_x, val_y)
 
-# # ---- Random Forrest ----
-# n_trees = [10, 50, 100, 200, 300, 500]
-# best_rf_model, best_rf_rmse = pipeline.fit_random_forest(n_trees)
-# best_rf_model_lasso, best_rf_rmse_lasso = pipeline.fit_random_forest(n_trees, use_lasso=True)
-# print(f"Best Random Forest RMSE: {best_rf_rmse:.3f}") # 36869.311
-# print(f"Best Random Forest RMSE: {best_rf_rmse_lasso:.3f}") # 300 trees, 42829.314
-
-
-# # ---- Linear models ----
-# # Linear regression
-# lm_model, rmse = pipeline.fit_linear_models(model_type="linear")
-# lm_lasso, rmse_lasso = pipeline.fit_linear_models(use_lasso=True, model_type="linear")
-# print(f"Linear Regression RMSE: {rmse:.3f}") # 35476.021
-# print(f"Linear Regression RMSE: {rmse_lasso:.3f}") # 35476.021
-
-# # Ridge regression
-# lm_ridge, rmse_ridge = pipeline.fit_linear_models(model_type="ridge")
-# lm_ridge_lasso, rmse_ridge_lasso = pipeline.fit_linear_models(use_lasso=True, model_type="ridge")
-# print(f"Linear Regression RMSE: {rmse_ridge:.3f}") # 46328.541
-# print(f"Linear Regression RMSE: {rmse_ridge_lasso:.3f}") # 46328.541
-
-# # Elastic Net regression
-# lm_elne, rmse_elne = pipeline.fit_linear_models(model_type="elastic_net")
-# lm_elne_lasso, rmse_elne_lasso = pipeline.fit_linear_models(use_lasso=True, model_type="elastic_net")
-# print(f"Linear Regression RMSE: {rmse_elne:.3f}") # 46328.541
-# print(f"Linear Regression RMSE: {rmse_elne_lasso:.3f}") # 46328.541
-
-
-# # ----- SVM -----
-# svm_model, rmse_svm = pipeline.fit_svm()
-# svm_model_lasso, rmse_svm_lasso = pipeline.fit_svm(use_lasso=True)
-# print(f"SVM RMSE: {rmse_svm:.3f}") # 46328.541
-# print(f"SVM RMSE: {rmse_svm_lasso:.3f}") # 46328.541
-
-
-# # ----- XGBoost -----
-# n_estimators = [100, 300, 500, 700, 900, 1200]
-# xgb_model, rmse_xgb = pipeline.fit_xgboost(n_estimators)
-# xgb_model_lasso, rmse_xgb_lasso = pipeline.fit_xgboost(n_estimators, use_lasso = True)
-# print(f"XGBoost RMSE: {rmse_xgb:.3f}") 
-# print(f"XGBoost RMSE: {rmse_xgb_lasso:.3f}")
-
-# pipeline.results_df.drop_duplicates()
 
 
 
