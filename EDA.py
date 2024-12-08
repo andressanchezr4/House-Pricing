@@ -210,30 +210,3 @@ def impute_data(df, columns2ohc, columns2order, predicted_variable, n_neighbors=
         return df_imputed
 
     
-
-    
-# nominal_columns = [
-#     'MSZoning', 'Street', 'Alley', 'LotConfig', 'Neighborhood', 'Condition1',
-#     'Condition2', 'BldgType', 'HouseStyle', 'RoofStyle', 'RoofMatl',
-#     'Exterior1st', 'Exterior2nd', 'MasVnrType', 'Foundation', 'Heating',
-#     'CentralAir', 'Electrical', 'GarageType', 'PavedDrive', 'SaleType',
-#     'SaleCondition', 'MiscFeature'
-# ]
-
-# ordinal_columns = [
-#     'LotShape', 'LandContour', 'Utilities', 'LandSlope', 'ExterQual',
-#     'ExterCond', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1',
-#     'BsmtFinType2', 'HeatingQC', 'KitchenQual', 'Functional', 'GarageFinish',
-#     'GarageQual', 'GarageCond', 'FireplaceQu', 'Fence', 'PoolQC'
-# ]
-  
-# df_train = pd.read_csv('C:/Users/andres.sanchez/Desktop/Data Analysis/house_pricing/data/train.csv')
-# df_train = df_train.drop('Id', axis=1) 
-# exploratory_analysis = EDA(df_train, 'C:/Users/andres.sanchez/Desktop/Data Analysis/house_pricing/figures/')
-# exploratory_analysis.general_overview()
-# exploratory_analysis.visualize_data()
-# #exploratory_analysis.corr_repare()
-# exploratory_analysis.NaN_analysis()
-# exploratory_analysis.repare_nan()
-
-    
