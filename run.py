@@ -2,7 +2,6 @@
 """
 @author: andres.sanchez
 """
-# https://www.kaggle.com/code/fedesoriano/house-prices-what-s-a-good-score#4.2.-Model-fitting
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -14,9 +13,7 @@ from MLs import MLsPipeline
 from Superlearner import SuperLearner
 from EDA import EDA, impute_data
 
-
-
-path = 'C:/Users/andres.sanchez/Desktop/Data Analysis/house_pricing/data/'
+path = './data/'
 df_train = pd.read_csv(path + 'train.csv')
 df_train_noid = df_train.drop('Id', axis=1) 
 
@@ -43,7 +40,7 @@ ordinal_columns = [
 ###########
 
 # Explore and repare TRAIN DATA
-path2figures = 'C:/Users/andres.sanchez/Desktop/Data Analysis/house_pricing/figures/'
+path2figures = './figures/'
 exploratory_analysis = EDA(df_train_noid, path2figures)
 
 exploratory_analysis.general_overview()
@@ -111,7 +108,7 @@ val_y, val_x = df_val_imp[['SalePrice']], df_val_imp.drop(['SalePrice'], axis=1)
 ###############################
 ### Machine learning Models ###
 ###############################
-path2scatterplots = 'C:/Users/andres.sanchez/Desktop/Data Analysis/house_pricing/ml_predictions/'
+path2scatterplots = './ml_predictions/'
 pipeline = MLsPipeline(train_x, train_y, val_x, val_y, path2scatterplots)
 
 # ---- Linear models ----
@@ -205,8 +202,7 @@ print(f'SuperLearner RMSE: {np.sqrt(mean_squared_error(val_y, y_pred_val))}')
 ##################
 ### Submission ###
 ##################
-# We train the best model with the whole data and make
-# predictions on the test set.
+# We train the best model with the whole data and make predictions on the test set.
 xgb_model.fit(df_train_imputed.drop(['SalePrice'], axis = 1), df_train_imputed[['SalePrice']])
 y_pred_test = xgb_model.predict(df_test_imputed)
 df2send = pd.DataFrame([df_test['Id'].values, y_pred_test.flatten()]).transpose()
