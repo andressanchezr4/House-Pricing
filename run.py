@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Dec  2 18:45:20 2024
-
 @author: andres.sanchez
 """
 # https://www.kaggle.com/code/fedesoriano/house-prices-what-s-a-good-score#4.2.-Model-fitting
