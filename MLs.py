@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 27 12:19:40 2024
-
 @author: andres.sanchez
 """
 
