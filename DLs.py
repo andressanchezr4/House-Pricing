@@ -36,7 +36,7 @@ class Decoder(tf.keras.layers.Layer):
         self.decoded_2 = layers.Dense(128, activation='relu')
         
         self.decoded_input_data = layers.Dense(input_dim, activation = 'linear')
-        self.decoded_price = layers.Dense(1, activation = 'linear')
+        # self.decoded_price = layers.Dense(1, activation = 'linear')
     
     def call(self, latent_space):
         
