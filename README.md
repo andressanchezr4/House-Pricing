@@ -1,5 +1,5 @@
 # House Price Kaggle Competition
-This repo contains an approach to find a solution for the competition from Kaggle: [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview).
+This repo contains a solution for the competition from Kaggle: [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview).
 
 The best model (XGBoost) achieved a score of 0.14. When trained with the data embedding from the autoencoder, the predictions are slightly improved. 
 
