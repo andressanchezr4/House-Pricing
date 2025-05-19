@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import tensorflow as tf
 
-from DLs_latent import Autoencoder, LossThresholdCallback, lr_schedule, plot_training_loss
+from DLs import Autoencoder, LossThresholdCallback, lr_schedule, plot_training_loss
 from MLs import MLsPipeline
 from Superlearner import SuperLearner
 from EDA import EDA, impute_data
