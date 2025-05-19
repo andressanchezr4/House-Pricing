@@ -54,7 +54,7 @@ exploratory_analysis.columns2delete
 df_train_nonan = exploratory_analysis.repare_nan()
 
 # Explore and repare TEST DATA
-path2figures = 'C:/Users/andres.sanchez/Desktop/Data Analysis/house_pricing/figures_test/'
+path2figures = './figures_test/'
 exploratory_analysis_test = EDA(df_test_noid, path2figures)
 
 exploratory_analysis_test.general_overview()
